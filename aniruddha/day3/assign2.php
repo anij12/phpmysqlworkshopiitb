@@ -90,7 +90,11 @@ and recalculating and updating database entries: total obtained and percent. -->
                 echo"<br>inserted";
                 echo"<br>new";
                 $s5=99;
-                $result1=mysqli_query($conn,"UPDATE class1 SET sub5=99 WHERE suname='Rohan';");
+                 $sum=$s1+$s2+$s3+$s4+$s5;
+                 $avg=(($sum/500)*100);
+                $result1=mysqli_query($conn,"UPDATE class1 SET sub5=99, total_obtained=$sum , per=$avg WHERE suname='Rohan';");
+                 echo" new total is".$sum;
+                 echo"<br>new percentage is ".$avg;
                 if($result1){
 
                     echo "<script>alert('your data got updated')</script>";
