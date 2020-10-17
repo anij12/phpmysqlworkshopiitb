@@ -31,11 +31,11 @@ function send_mail($toemail,$subject,$message)
     $mail->Port       = 587;
     $mail->Host       = "smtp.gmail.com";
     $mail->Username   = "joshianium18ce@student.mes.ac.in";
-    $mail->Password   = "9920959596Aj";
+    $mail->Password   = "******";
 
     $mail->IsHTML(true);
     $mail->AddAddress($toemail);
-    $mail->SetFrom("joshianium18ce@student.mes.ac.in", "9920959596Aj");
+    $mail->SetFrom("joshianium18ce@student.mes.ac.in", "******");
     $mail->Subject = $subject;
     $mail->Body = $message;
 
